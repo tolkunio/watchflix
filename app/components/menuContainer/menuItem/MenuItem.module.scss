@@ -1,6 +1,27 @@
-.menuItem{
 
-}
-.active{
+.menuItem{
+  padding-top: 24px;
+  >li {
+    list-style: none  ;
+    border-right-width: 4px;
+    border-right-color: transparent;
+    transition-property: color,background-color;
+    transition-timing-function: ease-in-out;
+    transition-duration: 200ms;
+
+    &.active {
+      border-right-color: var(--primary-color);
+
+      >a>span {
+        color: var(--font-color-white);
+      }
+      >a>svg {
+        fill: var(--primary-color);
+      }
+    }
+  }
+  .title{
+    padding-left: 10px;
+  }
 
 }

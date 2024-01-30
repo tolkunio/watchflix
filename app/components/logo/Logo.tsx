@@ -1,14 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import logoImage from 'assets/images/logo.svg';
+import s from './Logo.module.scss';
 import {FC} from "react";
 
 const Logo: FC = () => {
     return (
-        <Link href={'/'} className='px-layout mb-10 block'>
+        <Link href={'/'} className={s.logo}>
             <Image
                 src={logoImage}
-                width={247}
+                width={220}
                 height={34}
                 alt={'watchflix'}
                 draggable={false}

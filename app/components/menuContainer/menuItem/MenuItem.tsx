@@ -8,15 +8,19 @@ import MaterialIcon from "@/ui/MaterialIcon";
 
 const MenuItem: FC<{ item: IMenuItem }> = ({item}) => {
     const {asPath} = useRouter();
+    console.log(item);
     return (
-        <li className={cn({
-            [s.active]: asPath === item.link
-        })}>
-            <Link href={item.link}>
-                <MaterialIcon name={item.icon}/>
-                <span>{item.title}</span>
-            </Link>
-        </li>
+        <div className={s.menuItem}>
+            <li className={cn({
+                [s.active]: asPath === item.link,
+            })}>
+                <Link href={item.link}>
+                    <MaterialIcon name={item.icon}/>
+                    <span className={s.title}>{item.title}</span>
+                </Link>
+            </li>
+        </div>
+
     );
 };
 

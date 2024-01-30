@@ -1,39 +1,20 @@
 .menu {
-  @apply mb-14 animate-fade;
+  margin-bottom: 14px;
+  animation-name: fade;
+  animation-duration: .5s;
+  animation-timing-function: ease-in-out;
+
   .heading {
-    @apply text-gray-500 uppercase text-sm font-semi-bold pl=layout;
+    color: var(--gray-color-500);
+    text-transform: uppercase;
+    font-size: var(--text-sm);
+    line-height: var(--line-height);
+    font-weight: 600;
+    padding-left: var(--layoutPadding);
+    padding-top: 24px;
   }
 
   .ul {
-    > li {
-      @apply px-8 border-r-4 border-r-transparent transition-colors;
-    }
-
-    > a {
-      @apply flex items-center text-gray-600 px-3 mt-6 cursor-pointer;
-
-      > span {
-        @apply ml-3 text-lg hover:text-white;
-      }
-
-      > svg {
-        @apply text-2lg
-      }
-
-      > span, > svg {
-        @apply transition-colors
-      }
-    }
-
-    &.active {
-      @apply border-r-primary
-
-      >a,>span {
-        @apply text-white;
-      }
-      >a,>svg {
-        @apply fill-primary;
-      }
-    }
+    padding-left: var(--layoutPadding);
   }
 }
